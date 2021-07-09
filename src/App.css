@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+.CategoryFilterSection__CategoryItem__1ByUo {
+  border: violet;
+}
+.capsules {
+  display: flex;
+}
+
+.capsule {
+  border: 1px solid violet;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: lightpink;
+}
+
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  font-size: small;
+}
+.blog {
+  border: 1px solid lightsteelblue;
+  border-radius: 5px;
+  width: 300px;
+  margin: 20px;
+}
+
+.blog > img {
+  width: 300px;
+  height: 300px;
+}
