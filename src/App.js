@@ -1,25 +1,69 @@
 import logo from './logo.svg';
 import './App.css';
+import TopBar from './Components/TopBar';
+import Home from './Components/Home';
+import Contact from './Components/Contact';
+import SignUp from './Components/SignUp';
+import SignIn from './Components/SignIn';
+import About from './Components/About';
+import { BrowserRouter as Router, Switch, Link, Route, useParams, Redirect } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+const App = () => {
+  return ( 
+    <div>
+    
+      <Router>
+      <TopBar/>
+
+
+        <Switch>   
+          <Route path ="/" exact component= {Home}/>
+          <Route path ="/Contact"  component= {Contact}/>
+          <Route path ="/signup"  component= {SignUp}/>
+          <Route path ="/signin"  component= {SignIn}/>
+          <Route path ="/about"  component= {About}/>
+          <Route component={() => <h1>4O4 page not fund</h1>}/>
+
+        </Switch>
+      </Router>
     </div>
-  );
+   );
+}
+ 
+export default App;
+
+
+/*const Home = () => { 
+//  const [redirect, setRedirect] = useState(false) 
+
+// React.useEffect = (() => {
+  // setTimeout(() =>  setRedirect(true), 5000)
+  //})
+
+   //if (setRedirect) {
+//return <Redirect to="/Home"/>
+  // }
+
+  return ( <>
+  <h1>Home Page</h1>)
+  <Link to="/Contact"><button>Navigate</button></Link>
+  </>)
+  ;
+  
+//}*/
+
+
+
+/*const Contact = () => {
+  return (<h1>Contact Page</h1>);
 }
 
-export default App;
+const Users = () => {
+  const {id} = useParams();
+  return <> <h1>Users : {id}</h1>)</>
+}
+ 
+export default Home;*/
