@@ -12,7 +12,7 @@ const Contact = () => {
                 <h5>{name}</h5>
                 <h3>{value}</h3>
                 <p className="para">{shortDescription}</p>
-               <Link to="/about" ><button>Add to Cart</button></Link>
+               <Link to="/SignIn" ><button>Add to Cart</button></Link>
                 )
         </div>)
 }

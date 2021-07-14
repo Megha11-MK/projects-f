@@ -6,6 +6,7 @@ import Contact from './Components/Contact';
 import SignUp from './Components/SignUp';
 import SignIn from './Components/SignIn';
 import About from './Components/About';
+import PageNotFound from './Components/PageNotFound';
 import { BrowserRouter as Router, Switch, Link, Route, useParams, Redirect } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
@@ -25,7 +26,7 @@ const App = () => {
           <Route path ="/signup"  component= {SignUp}/>
           <Route path ="/signin"  component= {SignIn}/>
           <Route path ="/about"  component= {About}/>
-          <Route component={() => <h1>4O4 page not fund</h1>}/>
+          <Route component={PageNotFound}/>
 
         </Switch>
       </Router>
